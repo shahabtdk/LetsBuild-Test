@@ -1,0 +1,12 @@
+{
+  "name": "letsbuild-test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node solution.js < problems.txt"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
