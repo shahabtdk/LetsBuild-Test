@@ -8,5 +8,14 @@ const rl = readline.createInterface({
 
 rl.on("line", function (line) {
   if (line.trim() === "") return;
-  console.log(line);
+  const parts = line.trim().split(" ").map(Number);
+  const [L, W, H, ...cubeCounts] = parts;
+
+  const maxPower = cubeCounts.length - 1;
+  const cubeAvailable = [...cubeCounts];
+  const cubeUsed = new Array(cubeCounts.length).fill(0);
+
+  let totalVolume = L * W * H;
+
+  console.log({ maxPower, cubeAvailable, cubeUsed, totalVolume });
 });
